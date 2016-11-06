@@ -6,7 +6,7 @@
             [hiccup.page :as page]
             [ring.util.response :as response]))
 
-(def chat-messages (atom []))
+(def chat-messages (atom '()))
 
 (defn message-view
  "This generates the HTML for displaying a single message"
