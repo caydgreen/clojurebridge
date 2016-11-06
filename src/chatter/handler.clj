@@ -6,7 +6,7 @@
             [hiccup.page :as page]
             [ring.util.response :as response]))
 
-(def chat-messages (atom '()))
+(def chat-messages (atom []))
 
 (defn message-view
  "This generates the HTML for displaying a single message"
@@ -54,7 +54,7 @@
     (page/include-css "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")]
    [:body
     [:div.container
-     [:h1 "Our Chat App"]
+     [:h1 "Cay's Clojure Chat App"]
      [:div.row (form-view)]
      [:div.row (map message-view messages)]]]))
 
